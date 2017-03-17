@@ -17,7 +17,7 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. In application.hbs, add `link-to` helpers for the index and product routes
 
 
-##Ember Documentation...
+## Ember Documentation...
 The following is Ember's default documentation, so it has been left in this document.
 
 This README outlines the details of collaborating on this Ember application.
