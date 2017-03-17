@@ -9,12 +9,20 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 `ember g` = `ember generate`
 `ember s` = `ember serve`
 
-## Instructions (Complete step 2+ before moving on to the `step2` branch)
+## Instructions
+### The following should already be complete
 1. Open `package.json` and remove the ember welcome package (this step is already done in this branch)
 1. `ember g template application` to create a template for your entire app's layout
 1. `ember g route index products products/edit`
 1. Add headings to each route's templates
 1. In application.hbs, add `link-to` helpers for the index and product routes
+
+### Current challenges instructions (do these before moving on to next step/branch)
+1. `ember install ember-cli-mirage`
+1. `add a factory for products`. Make sure you use a `RestSerializer` in your Mirage setup, since we use REST at ASH.
+1. Add a table in `products.hbs` to display the product name and seller name.
+1. `ember install ash-table` and use and setup `ash-table` to display the following fields: 'name','price', 'rating' 'slogan', 'seller'
+1. Add unit tests to make sure the table has the correct amount of rows and columns
 
 
 ## Ember Documentation...
