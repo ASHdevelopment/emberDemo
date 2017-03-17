@@ -9,7 +9,7 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 `ember g` = `ember generate`
 `ember s` = `ember serve`
 
-## Steps (Steps 2+ are in the `step2` branch)
+## Instructions (Complete step 2+ before moving on to the `step2` branch)
 1. Open `package.json` and remove the ember welcome package (this step is already done in this branch)
 1. `ember g template application` to create a template for your entire app's layout
 1. `ember g route index products products/edit`
