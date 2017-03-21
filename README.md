@@ -19,10 +19,9 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 
 ### Current challenges instructions (do these before moving on to next step/branch)
 1. `ember install ember-cli-mirage`
-1. `add a factory for products`. Make sure you use a `RestSerializer` in your Mirage setup, since we use REST at ASH.
+1. add a `factory` for `product`. Make sure you use a `RestSerializer` in your Mirage setup and App, since we use REST at ASH. `ember g mirage-model product`. You'll also need to create a list of products in `scenarios`.
+1. Create a model in your application for `product`, return all records from the `products`, route and add the API endpoint to your mirage config.
 1. Add a table in `products.hbs` to display the product name and seller name.
-1. `ember install ash-table` and use and setup `ash-table` to display the following fields: 'name','price', 'rating' 'slogan', 'seller'
-1. Add unit tests to make sure the table has the correct amount of rows and columns
 
 
 ## Ember Documentation...
