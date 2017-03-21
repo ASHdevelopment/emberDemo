@@ -28,6 +28,7 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. Add a link around the product name that links to `products/edit/[id]` so that you can edit its attributes
 1. Add a form on the edit route that will allow you to edit the product. The form should have an action to save the record on submit
 
+
 ## Ember Documentation...
 The following is Ember's default documentation, so it has been left in this document.
 
