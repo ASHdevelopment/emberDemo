@@ -1,2 +1,35 @@
 <h2>All Products</h2>
+
 {{outlet}}
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Slogan</th>
+      <th>Category</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  {{#each model as |prod|}}
+    <tr>
+      <td>
+        {{prod.name}}
+      </td>
+      <td>
+        {{prod.price}}
+      </td>
+      <td>
+        {{prod.category}}
+      </td>
+      <td>
+        {{prod.seller}}
+      </td>
+      <td>
+        {{prod.rating}}
+      </td>
+    </tr>
+  {{/each}}
+
+</table>
