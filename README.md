@@ -16,10 +16,14 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. `ember g route index products products/edit`
 1. Add headings to each route's templates
 1. In application.hbs, add `link-to` helpers for the index and product routes
-1. `ember install ember-cli-mirage`
-1. add a `factory` for `product`. Make sure you use a `RestSerializer` in your Mirage setup and App, since we use REST at ASH. `ember g mirage-model product`. You'll also need to create a list of products in `scenarios`.
-1. Create a model in your application for `product`, return all records from the `products`, route and add the API endpoint to your mirage config.
-1. Add a table in `products.hbs` to display the following fields: 'name','price', 'rating' 'seller', and 'category'.
+1. `ember install ash-table` and use and setup `ash-table` to display the following fields: 'name','price', 'rating' 'seller', and 'category'
+1. Add unit tests to make sure the controller has the correct amount of columns headings
+1. Add a link to [Foundation CSS](https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css) to give us some style
+1. Add a link around the product name that links to `products/edit/[id]` so that you can edit its attributes. Make sure to update `router.js` with this path. You will also need to update your mirage config to return a single resource.
+1. Add a form on the edit route that will allow you to edit the product. The form should have an action to save the record on submit
+1. Make sure the products index shows the updated record attributes
+1. Add an acceptance test for this case. Start at the home page, then route to products, edit, and back to products. `ember g acceptance-test edit-product`
+
 
 ### Current challenges instructions (do these before moving on to next step/branch)
 1. `ember install ash-table` and use and setup `ash-table` to display the following fields: 'name','price', 'rating' 'seller', and 'category'
