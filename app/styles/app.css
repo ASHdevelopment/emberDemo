@@ -11,3 +11,8 @@ input{
   width:100%;
   margin-bottom: .5rem;
 }
+footer{
+  padding:1rem;
+  color:#666;
+  text-align: center
+}
