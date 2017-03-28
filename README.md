@@ -49,7 +49,6 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. Add a new route for `warehouses` to display all of our warehouses
 1. Create a Mirage fixture with 5 locations and dislay those locations on the template
 
-
 ## Ember Documentation...
 The following is Ember's default documentation, so it has been left in this document.
 
