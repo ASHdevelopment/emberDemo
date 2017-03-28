@@ -2,20 +2,22 @@
 
 {{outlet}}
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Price</th>
-      <th>Slogan</th>
       <th>Category</th>
+      <th>Seller</th>
       <th>Rating</th>
     </tr>
   </thead>
   {{#each model as |prod|}}
     <tr>
       <td>
-        {{prod.name}}
+        {{#link-to 'products.edit' item.id}}
+          {{prod.name}}
+        {{/link-to}}
       </td>
       <td>
         {{prod.price}}
@@ -32,4 +34,10 @@
     </tr>
   {{/each}}
 
-</table>
+</table> -->
+
+{{ash-table
+  headers=tableHd
+  tableBody=model
+  tableProps=tableProp
+}}

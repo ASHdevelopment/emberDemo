@@ -1,0 +1,13 @@
+body{
+  max-width: 1400px;
+  margin:0 auto;
+}
+form{
+  max-width: 70rem;
+  padding: 1rem;
+  border: 1px solid #666;
+}
+input{
+  width:100%;
+  margin-bottom: .5rem;
+}

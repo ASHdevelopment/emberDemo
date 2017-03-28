@@ -5,6 +5,18 @@ This assumes you've gone through ASH's Ember setup documentation. If you have no
 
 To get started, clone this repo locally and `ember init`. Each branch will take you through subsequent steps.
 
+## Initial Setup (cloning this repo)
+1. Make sure you have git setup on your computer
+1. Create a folder on your local computer that will eventually hold this project (the rest of the steps should be done in the command line in that folder)
+1. `git clone https://github.com/ASHdevelopment/emberDemo.git`
+1. `cd emberDemo` to move into the folder that was downloaded
+1. `ember init`. Do not overwrite any of the files when prompted.
+1. `ember s` will start the project locally in `http://localhost:4200`. Open [http://localhost:4200](http://localhost:4200) to make sure it's working. This is the fully working version of the app; for the sake of the exercise, you want to start from the ground up. So...
+1. Create a new folder to start working on the stripped down, ready to start app
+1. In that new folder: `git clone https://github.com/ASHdevelopment/emberDemo.git`
+1. `git checkout -b step1` to check out the `step1` branch
+1. `ember init`.  Do not overwrite any of the files when prompted.
+
 ## Shorthand
 `ember g` = `ember generate`  
 `ember s` = `ember serve`
@@ -20,14 +32,25 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. add a `factory` for `product`. Make sure you use a `RestSerializer` in your Mirage setup and App, since we use REST at ASH. `ember g mirage-model product`. You'll also need to create a list of products in `scenarios`.
 1. Create a model in your application for `product`, return all records from the `products`, route and add the API endpoint to your mirage config.
 1. Add a table in `products.hbs` to display the following fields: 'name','price', 'rating' 'seller', and 'category'.
+1. `ember install ash-table` and use and setup `ash-table` to display the following fields: 'name','price', 'rating' 'seller', and 'category'
+1. Add unit tests to make sure the controller has the correct amount of columns headings
+1. Add a link to [Foundation CSS](https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css) to give us some style
+1. Add a link around the product name that links to `products/edit/[id]` so that you can edit its attributes. Make sure to update `router.js` with this path. You will also need to update your mirage config to return a single resource.
+1. Add a form on the edit route that will allow you to edit the product. The form should have an action to save the record on submit
+1. Make sure the products index shows the updated record attributes
+1. Add an acceptance test for this case. Start at the home page, then route to products, edit, and back to products. `ember g acceptance-test edit-product`
 
 ### Current challenges instructions (do these before moving on to next step/branch)
-1. `ember install ash-table` and use and setup `ash-table` to display the following fields: 'name','price', 'rating' 'seller', and 'category'
-1. Add unit tests to make sure the table has the correct amount of rows and columns
-1. Add a link to [Foundation CSS](https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css) to give us some style
-1. Add a link around the product name that links to `products/edit/[id]` so that you can edit its attributes
-1. Add a form on the edit route that will allow you to edit the product. The form should have an action to save the record on submit
+1. Add `ember-a11y-testing` and see how we're doing with accessibility.
+1. There's 100 character limit (server-side) on product names. Add `ash-countdown-input` to show the user how many characters they have left.
+1. Use `ash-status-message` to confirm when the edit product feature is successful or has an error. Update your acceptance tests!
+1. People are navigating to `sahara.com/prime` for some reason. We need a `404` page for our app.
 
+1. Show the average rating for all products on the main products page. Add a unit test for your average logic.
+1. Let's show off the least expensive product overall and the highest rated product that has the lowest price. Put these in a component called `product-showcase` at the top of the page. Also, it's weird to compare a string of dollars, so turn `price` into a number and add a `transform` to add the dollar sign.
+1. Loading
+1. Add a new route for `warehouses` to display all of our warehouses
+1. Create a Mirage fixture with 5 locations and dislay those locations on the template
 
 ## Ember Documentation...
 The following is Ember's default documentation, so it has been left in this document.
