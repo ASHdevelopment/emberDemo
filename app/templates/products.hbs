@@ -1,4 +1,17 @@
 <h2>All Products</h2>
+{{#if success}}
+  {{ash-status-message
+      message=success
+      success=true
+  }}
+{{/if}}
+
+{{#if error}}
+{{ash-status-message
+    message=error
+    error=true
+}}
+{{/if}}
 
 {{outlet}}
 

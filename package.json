@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "ash-status-message": "1.1.4",
     "ash-table": "0.1.5",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",

@@ -2,15 +2,26 @@ import Ember from 'ember';
 
 const {
   get,
+  set,
   computed
 } = Ember;
 
 export default Ember.Controller.extend({
-  name:computed('model.name', function(){
-    return get(this, 'model.name');
+  name:computed('model.name', {
+    get(key) {
+      return get(this, 'model.name');
+    },
+    set(key, value) {
+      return value;
+    }
   }),
-  rating:computed('model.rating', function(){
-    return get(this, 'model.rating');
+  rating:computed('model.rating', {
+    get(key) {
+      return get(this, 'model.rating');
+    },
+    set(key, value) {
+      return value;
+    }
   }),
   actions:{
     submitForm(){
