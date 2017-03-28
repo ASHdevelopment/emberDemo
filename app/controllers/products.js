@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  success:null,
+  error:null,
   tableHd:['Name', 'Price', 'Category', 'Seller', 'Rating'],
   tableProp:[
     {

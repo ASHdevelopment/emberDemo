@@ -6,6 +6,7 @@ export default Ember.Route.extend({
   },
   actions:{
     updateProduct(data){
+      let ctrl = this.controller;
       //destructure the object
       const {
         id,
@@ -20,12 +21,19 @@ export default Ember.Route.extend({
         //   'name':name,
         //   'rating':rating
         // });
+        ctrl.set('success', `${name} has been updated!`)
         record.save();
 
       }).catch(err =>{
+        ctrl.set('error', `${err.message}`)
         console.error(err);
       });
-
+    },
+    willTransition(transition){
+      this.controller.setProperties({
+        'error':null,
+        'success':null
+      });
     }
   }
 });
