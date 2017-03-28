@@ -1,11 +1,13 @@
 <nav>
   {{#link-to 'index'}}Home{{/link-to}}
-  {{#link-to 'products'}}Products{{/link-to}}
+  {{#link-to 'products' class="productLink"}}Products{{/link-to}}
 </nav>
 
-<h1>Sahara</h1>
+<main>
+  <h1>Sahara</h1>
 
-{{outlet}}
+  {{outlet}}
+</main>
 
 <footer>
   <p>Sure, we got some products.</p>
