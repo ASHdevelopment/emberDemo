@@ -41,8 +41,6 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. Add an acceptance test for this case. Start at the home page, then route to products, edit, and back to products. `ember g acceptance-test edit-product`
 
 ### Current challenges instructions (do these before moving on to next step/branch)
-1. Add `ember-a11y-testing` and see how we're doing with accessibility.
-1. There's 100 character limit (server-side) on product names. Add `ash-countdown-input` to show the user how many characters they have left.
 1. Use `ash-status-message` to confirm when the edit product feature is successful or has an error. Update your acceptance tests!
 1. People are navigating to `sahara.com/prime` for some reason. We need a `404` page for our app.
 
