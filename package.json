@@ -22,6 +22,7 @@
     "ash-status-message": "1.1.4",
     "ash-table": "0.1.5",
     "broccoli-asset-rev": "^2.4.5",
+    "ember-a11y-testing": "0.4.1",
     "ember-ajax": "^2.4.1",
     "ember-cli": "2.10.1",
     "ember-cli-app-version": "^2.0.0",
