@@ -5,10 +5,10 @@ export default Factory.extend({
       return faker.commerce.productName();
   },
   price(){
-    return faker.commerce.price(1,249,2,"$");
+    return faker.random.number({min:99, max:24999});
   },
   rating(){
-    return faker.random.number({min:1, max:5});
+    return faker.random.number({min:1, max:99});
   },
   seller(){
     return faker.company.companyName();

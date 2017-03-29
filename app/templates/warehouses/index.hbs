@@ -1,0 +1,11 @@
+<h2>Warehouses Home Page</h2>
+
+<ul>
+  {{#each model as |house|}}
+    <li>
+      {{#link-to 'warehouses.warehouse' house}}
+        {{house.name}} - {{house.location}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>

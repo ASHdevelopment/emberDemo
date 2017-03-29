@@ -15,39 +15,18 @@
 
 {{outlet}}
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th>Seller</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  {{#each model as |prod|}}
-    <tr>
-      <td>
-        {{#link-to 'products.edit' item.id}}
-          {{prod.name}}
-        {{/link-to}}
-      </td>
-      <td>
-        {{prod.price}}
-      </td>
-      <td>
-        {{prod.category}}
-      </td>
-      <td>
-        {{prod.seller}}
-      </td>
-      <td>
-        {{prod.rating}}
-      </td>
-    </tr>
-  {{/each}}
+{{#product-showcase
+  product=leastExpensiveProduct
+}}
+  <b>Least Expensive</b>
+{{/product-showcase}}
 
-</table> -->
+{{#product-showcase
+  product=highestRatedProduct
+}}
+  <b>BESSSSTTTT</b>
+{{/product-showcase}}
+<h3>The average rating for all of Sahara's products is {{averageRating}}</h3>
 
 {{ash-table
   headers=tableHd

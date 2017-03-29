@@ -2,13 +2,12 @@ import Ember from 'ember';
 
 const {
   get,
-  set,
   computed
 } = Ember;
 
 export default Ember.Controller.extend({
   name:computed('model.name', {
-    get(key) {
+    get() {
       return get(this, 'model.name');
     },
     set(key, value) {

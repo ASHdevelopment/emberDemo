@@ -21,15 +21,15 @@ export default Ember.Route.extend({
         //   'name':name,
         //   'rating':rating
         // });
-        ctrl.set('success', `${name} has been updated!`)
+        ctrl.set('success', `${name} has been updated!`);
         record.save();
 
       }).catch(err =>{
-        ctrl.set('error', `${err.message}`)
+        ctrl.set('error', `${err.message}`);
         console.error(err);
       });
     },
-    willTransition(transition){
+    willTransition(){
       this.controller.setProperties({
         'error':null,
         'success':null
