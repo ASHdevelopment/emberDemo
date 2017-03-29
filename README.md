@@ -41,9 +41,9 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. Add an acceptance test for this case. Start at the home page, then route to products, edit, and back to products. `ember g acceptance-test edit-product`
 1. Use `ash-status-message` to confirm when the edit product feature is successful or has an error. Update your acceptance tests!
 1. People are navigating to `sahara.com/prime` for some reason. We need a `404` page for our app.
+1. Show the average rating for all products on the main products page. Add a unit test for your average logic.
 
 ### Current challenges instructions (do these before moving on to next step/branch)
-1. Show the average rating for all products on the main products page. Add a unit test for your average logic.
 1. Let's show off the least expensive product overall and the highest rated product that has the lowest price. Put these in a component called `product-showcase` at the top of the page. Also, it's weird to compare a string of dollars, so turn `price` into a number and add a `transform` to add the dollar sign.
 1. Add `ember-a11y-testing` and see how we're doing with accessibility.
 1. Add a new route for `warehouses` to display all of our warehouses
