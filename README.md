@@ -13,8 +13,8 @@ To get started, clone this repo locally and `ember init`. Each branch will take 
 1. `ember init`. Do not overwrite any of the files when prompted.
 1. `ember s` will start the project locally in `http://localhost:4200`. Open [http://localhost:4200](http://localhost:4200) to make sure it's working. This is the fully working version of the app; for the sake of the exercise, you want to start from the ground up. So...
 1. Create a new folder to start working on the stripped down, ready to start app
-1. In that new folder: `git clone https://github.com/ASHdevelopment/emberDemo.git`
-1. `git checkout -b step1` to check out the `step1` branch
+1. In that new folder: `git clone -b step1 https://github.com/ASHdevelopment/emberDemo.git`
+1. `cd emberDemo`
 1. `ember init`.  Do not overwrite any of the files when prompted.
 
 ## Shorthand
