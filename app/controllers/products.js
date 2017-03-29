@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
       //ideally we wouldn't use a transform to add a $ string, but this is
       //for demo purposes only. In the real world, we wouldn't need to parseFloat
       let thisRate = get(b, 'rating');
-      let highRate
+      let highRate;
       try{
         highRate = get(a, 'rating');
       } catch (e){
@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
       }
 
       return thisRate > highRate ? b : a;
-    })
+    });
 
     return highestRated;
 
@@ -40,7 +40,7 @@ export default Ember.Controller.extend({
       //ideally we wouldn't use a transform to add a $ string, but this is
       //for demo purposes only. In the real world, we wouldn't need to parseFloat
       let thisPrice = removeDollars(get(b, 'price'));
-      let lowPrice
+      let lowPrice;
       try{
         lowPrice = removeDollars(get(a, 'price'));
       } catch (e){
@@ -54,7 +54,7 @@ export default Ember.Controller.extend({
       // } else {
       //   return a;
       // }
-    })
+    });
 
     return leastExp;
   }),

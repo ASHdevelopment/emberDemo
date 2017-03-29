@@ -1,5 +1,7 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-demo/tests/helpers/module-for-acceptance';
+import a11yAudit from 'ember-a11y-testing/test-support/audit';
+
 
 moduleForAcceptance('Acceptance | edit product');
 
@@ -12,6 +14,7 @@ test('edit a product from the home page', function(assert) {
   let newProdName = 'A New Product Name';
 
   visit('/');
+  a11yAudit();
 
   andThen(function() {
     assert.equal(currentPath(), 'index', 'on the main homepage');
@@ -22,6 +25,7 @@ test('edit a product from the home page', function(assert) {
   });
 
   andThen(function() {
+    a11yAudit();
     assert.equal(currentPath(), 'products.index', 'navigate to products home page');
   });
 
@@ -59,6 +63,7 @@ test('edit a product from the home page', function(assert) {
 
 
   andThen(function() {
+    a11yAudit();
     assert.equal(currentPath(), 'products.index', 'navigate to products home page');
   });
 
@@ -68,29 +73,5 @@ test('edit a product from the home page', function(assert) {
     let tableProductNameText = firstCol.text().trim();
     assert.equal(tableProductNameText, newProdName, 'prodName in the parent table was changed after clicking "save"');
   });
-  //
-  // andThen(function(){
-  //
-  // });
-  //
-  // andThen(function(){
-  //
-  // });
-  //
-  // andThen(function(){
-  //
-  // });
-  //
-  // andThen(function(){
-  //
-  // });
-  //
-  // andThen(function(){
-  //
-  // });
-  //
-  // andThen(function(){
-  //
-  // });
 
 });

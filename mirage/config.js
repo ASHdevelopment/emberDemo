@@ -27,4 +27,6 @@ export default function() {
   this.get('/products');
   this.get('/products/:id');
   this.patch('/products/:id');
+  this.get('/warehouses');
+  this.get('/warehouses/:id');
 }

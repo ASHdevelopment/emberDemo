@@ -24,6 +24,17 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV['ember-a11y-testing'] = {
+    componentOptions: {
+      axeOptions: {
+        rules: {
+          'color-contrast': {
+            enabled: false
+          }
+        }
+      }
+    }
+  };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
