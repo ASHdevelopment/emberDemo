@@ -1,11 +1,8 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { get } from '@ember/object';	
+import { computed } from '@ember/object';
 
-const {
-  get,
-  computed
-} = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
   name:computed('model.name', {
     get() {
       return get(this, 'model.name');
@@ -15,7 +12,7 @@ export default Ember.Controller.extend({
     }
   }),
   rating:computed('model.rating', {
-    get(key) {
+    get() {
       return get(this, 'model.rating');
     },
     set(key, value) {

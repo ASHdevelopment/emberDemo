@@ -9,7 +9,7 @@ export default DS.Transform.extend({
 
   serialize(deserialized) {
     //return cents
-    deserialized = parseFloat(deserialized.replace(/[^0-9\.]+/g,""));
+    deserialized = parseFloat(deserialized.replace(/[^0-9.]+/g,""));
     return deserialized * 100;
   }
 });

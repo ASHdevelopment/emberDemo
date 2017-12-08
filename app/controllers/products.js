@@ -1,11 +1,8 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
+import { get } from '@ember/object';	
+import { computed } from '@ember/object';
 
-const {
-  get,
-  computed
-} = Ember;
-
-export default Ember.Controller.extend({
+export default Controller.extend({
   highestRatedProduct:computed('model.@each.rating', function(){
     //TODO: need unit tests
     let prods = get(this, 'model');
@@ -33,7 +30,7 @@ export default Ember.Controller.extend({
     let prods = get(this, 'model');
 
     function removeDollars(str){
-      return parseFloat(str.replace(/[^0-9\.]+/g,""));
+      return parseFloat(str.replace(/[^0-9.]+/g,""));
     }
 
     let leastExp = prods.reduce( (a, b) => {

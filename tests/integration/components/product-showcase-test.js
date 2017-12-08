@@ -5,21 +5,21 @@ moduleForComponent('product-showcase', 'Integration | Component | product showca
   integration: true
 });
 
-// test('it renders', function(assert) {
-//
-//   // Set any properties with this.set('myProperty', 'value');
-//   // Handle any actions with this.on('myAction', function(val) { ... });
-//
-//   this.render(hbs`{{product-showcase}}`);
-//
-//   assert.equal(this.$().text().trim(), '');
-//
-//   // Template block usage:
-//   this.render(hbs`
-//     {{#product-showcase}}
-//       template block text
-//     {{/product-showcase}}
-//   `);
-//
-//   assert.equal(this.$().text().trim(), 'template block text');
-// });
+test('it renders', function(assert) {
+
+  // Set any properties with this.set('myProperty', 'value');
+  // Handle any actions with this.on('myAction', function(val) { ... });
+
+  // Template block usage:
+  const sampleProduct = {
+    name:'Test Name'
+  }
+
+  this.set('product', sampleProduct);
+  this.render(hbs`
+    {{product-showcase
+      product=product
+    }}
+  `);
+  assert.equal(this.$().find('h2').text().trim(), sampleProduct.name);
+});

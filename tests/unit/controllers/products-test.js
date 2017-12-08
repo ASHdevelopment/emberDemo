@@ -1,5 +1,7 @@
+import { A } from '@ember/array';
+import ArrayProxy from '@ember/array/proxy';
+import EmberObject from '@ember/object';
 import { moduleFor, test } from 'ember-qunit';
-import Ember from 'ember';
 
 moduleFor('controller:products', 'Unit | Controller | products', {
   // Specify the other units that are required for this test.
@@ -14,12 +16,12 @@ test('test table columns', function(assert){
 
 test('averageRating test', function(assert){
   const products = [
-    Ember.Object.create({name:'test', rating:2}),
-    Ember.Object.create({name:'test2', rating:4}),
+    EmberObject.create({name:'test', rating:2}),
+    EmberObject.create({name:'test2', rating:4}),
   ];
 
-  const model = Ember.ArrayProxy.create({
-    content: Ember.A(products)
+  const model = ArrayProxy.create({
+    content: A(products)
   });
 
   const subj = this.subject();
@@ -32,13 +34,13 @@ test('averageRating test', function(assert){
 
 test('averageRating test with fraction', function(assert){
   const products = [
-    Ember.Object.create({name:'test', rating:2}),
-    Ember.Object.create({name:'test2', rating:4}),
-    Ember.Object.create({name:'test3', rating:4}),
+    EmberObject.create({name:'test', rating:2}),
+    EmberObject.create({name:'test2', rating:4}),
+    EmberObject.create({name:'test3', rating:4}),
   ];
 
-  const model = Ember.ArrayProxy.create({
-    content: Ember.A(products)
+  const model = ArrayProxy.create({
+    content: A(products)
   });
 
   const subj = this.subject();

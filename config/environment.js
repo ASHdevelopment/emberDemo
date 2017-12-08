@@ -1,9 +1,10 @@
-/* jshint node: true */
+/* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'ember-demo',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -24,22 +25,22 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV['ember-a11y-testing'] = {
-    componentOptions: {
-      axeOptions: {
-        rules: {
-          'color-contrast': {
-            enabled: false
-          }
-        }
-      }
-    }
-  };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-a11y-testing'] = {
+      componentOptions: {
+        axeOptions: {
+          rules: {
+            'color-contrast': {
+              enabled: false
+            }
+          }
+        }
+      }
+    };
   }
 
   if (environment === 'test') {
@@ -54,7 +55,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    // here you can enable a production-specific feature
   }
 
   return ENV;
